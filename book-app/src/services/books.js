@@ -44,3 +44,21 @@ export const deleteBook = async id => {
     throw error
   }
 }
+
+export const addComment = async (bookId, commentBody) => {
+  try {
+    const response = await api.post(`/${bookId}`, commentBody)
+    return response
+  } catch (error) {
+    throw error
+  }
+}
+
+export const deleteComment = async (bookId, commentId) => {
+  try {
+    const response = await api.delete(`/${bookId}/${commentId}`)
+    return response
+  } catch (error) {
+    throw error
+  }
+}

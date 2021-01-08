@@ -2,3 +2,19 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  border: 1px solid gray;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.links {
+  font-size: 30px;
+}

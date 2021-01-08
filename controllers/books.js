@@ -1,5 +1,6 @@
 const Book = require('../models/book')
 const db = require('../db/connection')
+const Comment = require ('../models/comment')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -15,7 +16,7 @@ const getBooks = async (req, res) => {
 const getBook = async (req, res) => {
   try {
     const { id } = req.params
-    const book = await Book.findById(id)
+    const book = await Book.findById(id).populate("comments")
     if (book) {
       return res.json(book)
     }
@@ -62,10 +63,44 @@ const deleteBook = async (req, res) => {
   }
 }
 
+const createComment = async (req, res) => {
+  try {
+    const { bookId } = req.params
+    const book = await Book.findById(bookId)
+    if (book) {
+      const comment = await new Comment({ ...req.body, book: bookId })
+      await comment.save()
+      book.comments.push(comment._id)
+      await book.save()
+      res.status(201).json(book)
+    }
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: error.message })
+  }
+}
+
+const deleteComment = async (req, res) => {
+  try {
+    const { bookId, commentId } = req.params
+    const book = await Book.findById(bookId)
+    const comment = await Comment.findById(commentId)
+    const commentIndex = book.comments.indexOf(commentId)
+    book.comments.splice(commentIndex, 1)
+    await book.save()
+    await comment.delete()
+    res.status(201).json(book)
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+}
+
 module.exports = {
   getBook,
   getBooks,
   createBook,
   updateBook,
-  deleteBook
+  deleteBook,
+  createComment,
+  deleteComment
 }

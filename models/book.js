@@ -7,7 +7,11 @@ const Book = new Schema(
     imgURL: { type: String, required: true },
     author: {type: String, required: true},
     description: { type: String, required: true },
-    price: { type: String, required: true }
+    price: { type: String, required: true },
+    comments: [{
+      type: Schema.Types.ObjectId,
+      ref: "comment"
+    }]
   },
   { timestamps: true }
 )

@@ -4,9 +4,14 @@ import { useParams } from "react-router-dom";
 import { getBook } from "../../services/books";
 import "./BookDetail.css";
 import Form from '../../components/Form/Form'
+import Comment from '../../components/Comment/Comment'
 
 const BookDetail = () => {
+  
+  const [reload, setReload] = useState(false)
+
   const { id } = useParams();
+
   const [book, setBook] = useState([]);
 
   useEffect(() => {
@@ -15,7 +20,7 @@ const BookDetail = () => {
       setBook(response.data);
     };
     getBookDetail();
-  }, []);
+  }, [reload]);
 
   return (
     <Layout>
@@ -25,15 +30,26 @@ const BookDetail = () => {
             <img src={book.imgURL} />
           </div>
           <div className="BookDetails">
-            {book.name} <br />
-            {book.author} <br />
-            {book.price} <br />
-            {book.description}
+            <h3>Title: {book.name}</h3> <br />
+            <h4>Price: {book.price}</h4> <br />
+            <h4>Author: {book.author}</h4> <br />
+            <h4>Description: {book.description}</h4>
           </div>
         </div>
       </div>
-      <div>
-        <Form />
+      <div className="Comment">
+        <Form bookId={book._id} setReload={setReload} />
+      </div>
+      <div className="Comments">
+        {book.comments && book.comments.map((comment) => {
+          return <Comment
+            name={comment.name}
+            description={comment.description}
+            _id={comment._id}
+            bookId={book._id}
+            setReload={setReload}
+          />
+        })}
       </div>
     </Layout>
   );

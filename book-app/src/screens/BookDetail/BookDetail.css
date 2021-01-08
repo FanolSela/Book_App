@@ -4,12 +4,34 @@
   margin: 20px;
 }
 
+/* Book Info */
 .BookDetails {
   display: flex;
   flex-direction: column;
   margin: 50px;
 }
 
+/* Book Image */
 img {
   height: 350px;
+  padding: 20px;
+  border: 1px solid gray;
 }
+
+/* Book Info */
+h4, h3 {
+  text-align: left;
+}
+
+/* Comment Section */
+.Comments {
+  border: 20px solid rgb(207, 203, 203);
+  border-radius: 10px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+/* Single Comment */
+/* .Comment {
+
+} */

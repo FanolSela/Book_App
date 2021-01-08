@@ -2,5 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 10px;
+  padding-top: 25px;
+}
+
+.book {
+  padding-bottom: 10px;
 }
