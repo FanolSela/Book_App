@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import './Form.css'
 import { addComment } from '../../services/books'
-import { useHistory } from 'react-router-dom'
 
 const Form = (props) => {
-
-  const history = useHistory()
 
   const { bookId } = props
 
@@ -23,7 +20,6 @@ const Form = (props) => {
     e.preventDefault()
     const response = await addComment(bookId, review)
     console.log(response)
-    // history.push(`/book/${bookId}`)
     props.setReload(prev => !prev)
   }
 

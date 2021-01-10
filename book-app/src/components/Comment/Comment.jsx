@@ -1,6 +1,7 @@
 import React from 'react';
 import { deleteComment } from '../../services/books' 
 import { useHistory } from 'react-router-dom'
+import './Comment.css'
 
 const Comment = (props) => {
 
