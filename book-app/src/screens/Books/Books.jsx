@@ -5,6 +5,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import { getBooks } from '../../services/books'
 
 const Books = (props) => {
+  
   const [queriedBooks, setQueriedBooks] = useState([]);
 
   useEffect(() => {

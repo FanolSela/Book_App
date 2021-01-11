@@ -11,7 +11,7 @@ const main = async () => {
         "imgURL": "https://images-na.ssl-images-amazon.com/images/I/81Dy6cNM7yL.jpg",
         "author": "Akira Toriyama",
         "description": "The adventures of Son Goku who pursues to be the greatest martial artist ever",
-        "price": "$19.99"
+        "price": "19.99"
       },
       {
         "name": "Naruto",
