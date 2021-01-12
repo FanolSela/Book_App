@@ -15,7 +15,7 @@ const Home = (props) => {
         </div>
         <div className="Well-Written">
           <h4>Well Written Books</h4>
-          <p>These mangas are written from the the Greatest mangakas in the history</p>
+          <p>These mangas are written from the the Greatest mangakas in history</p>
         </div>
         <div className="New-York-Times">
           <h4>New York Times says...</h4>
