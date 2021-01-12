@@ -42,8 +42,9 @@ const BookDetail = (props) => {
       </div>
       <div className="Comments">
         {book.comments && book.comments.map((comment) => {
-          return <Comment
-            user={props.user}
+          return <Comment key={comment._id}
+            user={props.user} 
+            author={comment.user}
             name={comment.name}
             description={comment.description}
             _id={comment._id}

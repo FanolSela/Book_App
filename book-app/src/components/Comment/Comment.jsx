@@ -21,7 +21,7 @@ const Comment = (props) => {
     <div className="Comment-Section">
       <h4>{name}</h4>
       <p>{description}</p>
-      {user && <button onClick={handleDelete}>Delete</button>}
+      {user && user.id === props.author && <button onClick={handleDelete}>Delete</button>}
     </div>
   );
 };

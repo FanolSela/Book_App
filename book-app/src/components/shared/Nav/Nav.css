@@ -28,4 +28,11 @@ a {
 
 .book-link {
   text-align: center;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .links, .book-link, .logo {
+    font-size: 17px;
+  }
 }

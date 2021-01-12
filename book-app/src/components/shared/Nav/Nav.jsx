@@ -21,8 +21,8 @@ const Nav = ({ user }) => {
     <nav>
       <div className="nav">
         <NavLink className="logo" to="/">Manga Guy</NavLink>
-        <div className="links">
           <NavLink className="book-link" to="/books">Books</NavLink>
+        <div className="links">
           {user && <div className="link welcome">Welcome, {user.username}</div>}
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>

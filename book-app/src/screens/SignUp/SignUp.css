@@ -21,15 +21,27 @@
   padding: 16px;
 }
 
+.form-container input {
+  width: 90%;
+  display: block;
+  margin: 15 auto;
+}
+
 .form-container form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto;
+  margin: 0 auto;
   width: 25%;
 }
 
 h3 {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 500px){
+  .form-container form {
+    width: 70%;
+  }
 }
