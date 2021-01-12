@@ -1,0 +1,38 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+
+.link {
+  padding: 0 10px 0 10px;
+}
+
+.book-link {
+  text-align: center;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .links, .book-link, .logo {
+    font-size: 17px;
+  }
+}

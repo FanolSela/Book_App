@@ -1,0 +1,25 @@
+.home-text {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px; 
+}
+
+.home-text div {
+  width: 30%;
+  text-align: left;
+}
+
+.home-text h4 {
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .home-text {
+    flex-direction: column;
+  }
+
+  .home-text div {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

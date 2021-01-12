@@ -1,0 +1,49 @@
+.BookDetail {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+/* Book Info */
+.BookDetails {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.BookDetails h3 {
+  text-align: left;
+  display: block;
+}
+
+/* Book Image */
+.Page-Image img, img.book-image {
+  height: 350px;
+  padding: 20px;
+  border: 1px solid gray;
+}
+
+/* Book Info */
+h4, h3 {
+  text-align: left;
+}
+
+/* Comment Section */
+.Comments {
+  border: 20px solid rgb(207, 203, 203);
+  border-radius: 10px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+@media screen and (max-width: 500px) {
+  .BookDetail {
+    flex-direction: column;
+  }
+}
