@@ -40,8 +40,35 @@ h3 {
   justify-content: center;
 }
 
+.form-container submit {
+  margin-left: 18px;
+}
+
+.submit {
+  margin: 10px;
+  margin: auto;
+}
+
+.form-container button {
+  margin: auto;
+}
+
 @media screen and (max-width: 500px){
   .form-container form {
     width: 70%;
+  }
+
+  .form-container input {
+    width: 90%;
+    display: block;
+    margin: 15 auto;
+  }
+
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 25%;
   }
 }

@@ -9,16 +9,16 @@ const Home = (props) => {
       <div className="home"></div>
       <Carousel />
       <div className="home-text">
-        <div>
+        <div className="Critics">
           <h4>Critics Say...</h4>
           <p>These manga are the best in the game!</p>
         </div>
-        <div>
+        <div className="Well-Written">
           <h4>Well Written Books</h4>
-          <p>These mangas are written from the the Greatest mangaka in the history</p>
+          <p>These mangas are written from the the Greatest mangakas in the history</p>
         </div>
-        <div>
-          <h4>On the the New York Times</h4>
+        <div className="New-York-Times">
+          <h4>New York Times says...</h4>
           <p>News York Times says this is the future of all literature.</p>
         </div>
       </div>

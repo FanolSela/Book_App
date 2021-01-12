@@ -2,3 +2,9 @@
   display: flex;
   justify-content: center;
 }
+
+.slider-content {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+}
