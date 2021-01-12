@@ -6,7 +6,7 @@ import "./BookDetail.css";
 import Form from '../../components/Form/Form'
 import Comment from '../../components/Comment/Comment'
 
-const BookDetail = () => {
+const BookDetail = (props) => {
   
   const [reload, setReload] = useState(false)
 
@@ -23,7 +23,7 @@ const BookDetail = () => {
   }, [reload]);
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div>
         <div className="BookDetail">
           <div className="Page-Image">
@@ -38,11 +38,12 @@ const BookDetail = () => {
         </div>
       </div>
       <div className="Comment">
-        <Form bookId={book._id} setReload={setReload} />
+        <Form bookId={book._id} user={props.user} setReload={setReload} />
       </div>
       <div className="Comments">
         {book.comments && book.comments.map((comment) => {
           return <Comment
+            user={props.user}
             name={comment.name}
             description={comment.description}
             _id={comment._id}

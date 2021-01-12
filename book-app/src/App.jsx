@@ -35,13 +35,13 @@ function App() {
         <Route path="/book/:id">
           <BookDetail user={user} />
         </Route>
-        <Route path="sign-up">
+        <Route path="/sign-up">
           <SignUp setUser={setUser} />
         </Route>
-        <Route path="sign-in">
+        <Route path="/sign-in">
           <SignIn setUser={setUser} />
         </Route>
-        <Route path="sign-out">
+        <Route path="/sign-out">
           <SignOut setUser={setUser} clearUser={clearUser} />
         </Route>
       </Switch>

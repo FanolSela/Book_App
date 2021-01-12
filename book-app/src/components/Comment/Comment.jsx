@@ -7,7 +7,7 @@ const Comment = (props) => {
 
   const history = useHistory()
 
-  const { name, description, _id, bookId } = props  
+  const { name, description, _id, bookId, user } = props
 
   const handleDelete = async (e) => {
     e.preventDefault()
@@ -21,7 +21,7 @@ const Comment = (props) => {
     <div className="Comment-Section">
       <h4>{name}</h4>
       <p>{description}</p>
-      <button onClick={handleDelete}>Delete</button>
+      {user && <button onClick={handleDelete}>Delete</button>}
     </div>
   );
 };

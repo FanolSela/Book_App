@@ -28,7 +28,8 @@ const Books = (props) => {
 
   return (
     <Layout user={props.user}>
-        <div className="books">{bookJSX}</div>
+      <div className="books">{bookJSX}</div>
+      {console.log(queriedBooks)}
     </Layout>
   );
 };
