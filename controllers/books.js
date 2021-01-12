@@ -1,6 +1,7 @@
 const Book = require('../models/book')
 const db = require('../db/connection')
-const Comment = require ('../models/comment')
+const Comment = require('../models/comment')
+const User = require('../models/user')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -67,8 +68,9 @@ const createComment = async (req, res) => {
   try {
     const { bookId } = req.params
     const book = await Book.findById(bookId)
-    if (book) {
-      const comment = await new Comment({ ...req.body, book: bookId })
+    const user = await User.findOne({ username: req.body.username })
+    if (book && user) {
+      const comment = await new Comment({ ...req.body, user: user._id ,book: bookId })
       await comment.save()
       book.comments.push(comment._id)
       await book.save()

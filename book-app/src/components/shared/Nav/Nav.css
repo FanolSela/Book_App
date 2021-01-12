@@ -25,3 +25,7 @@ a {
 .link {
   padding: 0 10px 0 10px;
 }
+
+.book-link {
+  text-align: center;
+}

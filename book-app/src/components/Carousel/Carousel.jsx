@@ -23,8 +23,8 @@ const Carousel = () => {
     <div className="slider">
       { images[0] && < SimpleImageSlider 
         images={images}
-        width={1710}
-        height={2650}
+        width={335}
+        height={520}
         showBullets={true}
         useGPURender={true}
         showNavs={true}

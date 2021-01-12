@@ -7,7 +7,11 @@ let commmentSchema = new Schema({
   book: {
     type: Schema.Types.ObjectId,
     ref: "books"
-  }
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref:"users"
+  },
 },
   { timestamps: true }
 )

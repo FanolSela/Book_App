@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt')
-const jwt = reqiure('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 const User = require('../models/user')
 const db = require('../db/connection')
 
@@ -8,7 +8,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const SALT_ROUNDS = 11
 const TOKEN_KEY = 'areallylonggoodkeylol'
 
-const signUp = async (res, req) => {
+const signUp = async (req, res) => {
+  console.log(req.body)
   try {
     const { username, email, password } = req.body
     const password_digest = await bcrypt.hash(password, SALT_ROUNDS)

@@ -22,7 +22,7 @@ const Nav = ({ user }) => {
       <div className="nav">
         <NavLink className="logo" to="/">Manga Guy</NavLink>
         <div className="links">
-          <NavLink className="link" to="/books">Books</NavLink>
+          <NavLink className="book-link" to="/books">Books</NavLink>
           {user && <div className="link welcome">Welcome, {user.username}</div>}
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>
