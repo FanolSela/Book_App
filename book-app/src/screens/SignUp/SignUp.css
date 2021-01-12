@@ -22,7 +22,7 @@
 }
 
 .form-container input {
-  width: 90%;
+  width: 80%;
   display: block;
   margin: 15 auto;
 }
@@ -51,6 +51,13 @@ h3 {
 
 .form-container button {
   margin: auto;
+}
+
+.Sign-up-border {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid gray;
 }
 
 @media screen and (max-width: 500px){
