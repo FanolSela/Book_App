@@ -1,0 +1,6 @@
+.Sign-in-border {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid gray;
+}

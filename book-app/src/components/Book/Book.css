@@ -6,3 +6,8 @@
   width: 300px;
 }
 
+.book:hover {
+  padding: 5px;
+  transition: .5s;
+  box-shadow: 5px;
+}

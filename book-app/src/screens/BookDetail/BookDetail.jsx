@@ -20,7 +20,7 @@ const BookDetail = (props) => {
       setBook(response.data);
     };
     getBookDetail();
-  }, [reload]);
+  }, [reload, id]);
 
   return (
     <Layout user={props.user}>
